@@ -1,6 +1,5 @@
 import React from "react";
 import "./sections/section.css";
-// import "./App.css";
 
 import UseMemoSection from "./sections/UseMemoSection";
 import MemoSection from "./sections/MemoSection";
