@@ -27,7 +27,7 @@ const viewSpanStyle = {
 let perfomanceSectionRender = 0;
 let nonPerformingSectionRender = 0;
 
-const MemozitainSection = () => {
+const UseMemoSection = () => {
   const [numberList, setNumberList] = useState([1, 2, 3, 4, 5]);
   const [randomNumber, setRandomNumber] = useState(0);
 
@@ -118,7 +118,7 @@ const MemozitainSection = () => {
   );
 };
 
-export default MemozitainSection;
+export default UseMemoSection;
 
 const PerformanceSection = ({ sumWithMemo, renderCount }) => {
   return (
@@ -173,6 +173,11 @@ const SubjectExpressionSection = () => {
         componentlerde kullanılamaz, çünkü hook'lar sadece fonksiyonel
         componentlerde çalışır. Functional component, memoized component, custom
         hook vb. her türlü component içinde kullanılabilir.
+      </p>
+
+      <p>
+        Genellikle useCallback ile karşılaştırılsada useMemo bir değeri ön
+        bellekte saklamak için kullanılır.
       </p>
     </>
   );
