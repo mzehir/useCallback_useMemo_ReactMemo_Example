@@ -172,7 +172,7 @@ const SubjectExpressionSection = () => {
         Yukarıdaki örnekte reactMemo ile oluşturulan ve reactMemo kullanılmada
         oluşturulan 2 çocuk bileşen vardır. Ebeveyn bileşendeki değer
         değiştiğinde bu iki çocuk bileşen arasındaki güncelleme farkı
-        gözükmektedir.{" "}
+        gözükmektedir.
       </p>
     </>
   );
