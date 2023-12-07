@@ -1,39 +1,15 @@
 import React, { useState, useEffect, memo } from "react";
-
-const rootStyle = {
-  width: "25vw",
-  border: "1px solid black",
-  padding: "10px",
-};
-
-const operationsAndViewsWrapperStyle = {
-  display: "flex",
-  flexDirection: "column",
-  gap: "5px",
-  border: "1px dotted blue",
-  padding: "25px",
-};
-
-const viewSpanStyle = {
-  fontWeight: 400,
-  background: "white",
-  color: "black",
-  padding: "10px 15px",
-  borderRadius: "4px",
-  border: "1px solid rgb(79, 98, 148)",
-  boxShadow: "0 0 4px rgb(79, 98, 148)",
-  display: "none",
-};
+import "./section.css";
 
 const MemoSection = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <div style={rootStyle}>
-      <h1>reactMemo Örneği</h1>
+    <div className="sectionRootStyle boxShadowSectionStyle">
+      <h1 className="titleStyle">reactMemo Örneği</h1>
 
       {/* işlemler */}
-      <div style={operationsAndViewsWrapperStyle}>
+      <div className="operationsAndViewsWrapperStyle boxShadowSectionItemStyle">
         <h2
           style={{
             textDecoration: "underline",
@@ -49,7 +25,7 @@ const MemoSection = () => {
       <br />
 
       {/* Gösterimler */}
-      <div style={operationsAndViewsWrapperStyle}>
+      <div className="operationsAndViewsWrapperStyle boxShadowSectionItemStyle">
         <h2
           style={{
             textDecoration: "underline",
@@ -95,9 +71,9 @@ const ChildStandartSection = () => {
 
   return (
     <div id={"childStandartSection"}>
-      <h3>Standart Olarak Oluşturulan Çocuk Bileşeni</h3>
+      <h3>1- Standart Olarak Oluşturulan Çocuk Bileşeni</h3>
 
-      <span id="childStandartSectionSpan" style={viewSpanStyle}>
+      <span id="childStandartSectionSpan" className="viewSpanStyle">
         Standart Olarak Oluşturulan Çocuk Bileşeni Güncellendi
       </span>
     </div>
@@ -122,9 +98,9 @@ const ChildMemoSection = memo(() => {
 
   return (
     <div id={"childMemoSection"}>
-      <h3>reactMemo İle Oluşturulan Çocuk Bileşeni</h3>
+      <h3>2- reactMemo İle Oluşturulan Çocuk Bileşeni</h3>
 
-      <span id="childMemoSectionSpan" style={viewSpanStyle}>
+      <span id="childMemoSectionSpan" className="viewSpanStyle">
         reactMemo İle Oluşturulan Çocuk Bileşeni Güncellendi
       </span>
     </div>
@@ -134,7 +110,7 @@ const ChildMemoSection = memo(() => {
 const SubjectExpressionSection = () => {
   return (
     <>
-      <h3 style={{ marginBottom: "0" }}>reactMemo Hakkında</h3>
+      <h3 style={{ marginBottom: "0" }}>3- reactMemo Hakkında</h3>
 
       <p>
         reactMemo, bir bişeşeni sardığımız üst katman bileşenidir. Sarılan

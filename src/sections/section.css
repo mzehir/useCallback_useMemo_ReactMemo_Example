@@ -1,0 +1,78 @@
+.titleStyle {
+  padding: 15px;
+  text-align: center;
+  font-size: 2em; /* veya istediğiniz font büyüklüğü */
+  color: #333; /* metin rengi */
+  background-color: #f0f0f0; /* arkaplan rengi */
+
+  /* Üç boyutlu efektler */
+  border: 1px solid #ccc; /* kenarlık rengi */
+  border-radius: 8px; /* kenarlık yuvarlatma */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* gölge efekti */
+  transform: perspective(1000px) rotateX(5deg) rotateY(25deg); /* perspektif ve döndürme */
+}
+
+.boxShadowSectionStyle {
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.boxShadowSectionItemStyle {
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.sectionsWrapperStyle {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  gap: 50px;
+  text-align: center;
+}
+
+.sectionRootStyle {
+  padding: 10px;
+  max-width: 500px;
+}
+
+.operationsAndViewsWrapperStyle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* border: 1px dotted blue; */
+  padding: 25px;
+  padding-top: 0px;
+}
+
+.viewSpanStyle {
+  font-weight: 400;
+  background: white;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px solid rgb(79, 98, 148);
+  box-shadow: rgb(79, 98, 148) 0px 0px 4px;
+}
+
+/* Ekran genişliği 1200 piksel ve daha küçükse */
+@media (max-width: 1200px) {
+  .sectionRootStyle {
+    width: 400px;
+  }
+}
+
+/* Ekran genişliği 720 piksel ve daha küçükse */
+@media (max-width: 800px) {
+  .sectionRootStyle {
+    width: 400px;
+  }
+}
+
+/* Ekran genişliği 480 piksel ve daha küçükse */
+@media (max-width: 400px) {
+  .sectionRootStyle {
+    width: 100%;
+  }
+}

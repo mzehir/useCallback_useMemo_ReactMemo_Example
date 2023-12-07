@@ -1,29 +1,5 @@
 import React, { useState, useEffect, memo, useCallback } from "react";
-
-const rootStyle = {
-  width: "25vw",
-  border: "1px solid black",
-  padding: "10px",
-};
-
-const operationsAndViewsWrapperStyle = {
-  display: "flex",
-  flexDirection: "column",
-  gap: "5px",
-  border: "1px dotted blue",
-  padding: "25px",
-};
-
-const viewSpanStyle = {
-  fontWeight: 400,
-  background: "white",
-  color: "black",
-  padding: "10px 15px",
-  borderRadius: "4px",
-  border: "1px solid rgb(79, 98, 148)",
-  boxShadow: "0 0 4px rgb(79, 98, 148)",
-  display: "none",
-};
+import "./section.css";
 
 const UseCallbackSection = () => {
   const [count, setCount] = useState(0);
@@ -37,11 +13,11 @@ const UseCallbackSection = () => {
   }, []);
 
   return (
-    <div style={rootStyle}>
-      <h1>useCallback Örneği</h1>
+    <div className="sectionRootStyle boxShadowSectionStyle">
+      <h1 className="titleStyle">useCallback Örneği</h1>
 
       {/* işlemler */}
-      <div style={operationsAndViewsWrapperStyle}>
+      <div className="operationsAndViewsWrapperStyle boxShadowSectionItemStyle">
         <h2
           style={{
             textDecoration: "underline",
@@ -57,7 +33,7 @@ const UseCallbackSection = () => {
       <br />
 
       {/* Gösterimler */}
-      <div style={operationsAndViewsWrapperStyle}>
+      <div className="operationsAndViewsWrapperStyle boxShadowSectionItemStyle">
         <h2
           style={{
             textDecoration: "underline",
@@ -104,9 +80,9 @@ const ChildMemoSectionFirst = memo(() => {
 
   return (
     <div id={"childMemoSectionFirst"}>
-      <h3>reactMemo İle Oluşturulan Birinci Çocuk Bileşeni</h3>
+      <h3>1- reactMemo İle Oluşturulan Birinci Çocuk Bileşeni</h3>
 
-      <span id="childMemoSectionFirstSpan" style={viewSpanStyle}>
+      <span id="childMemoSectionFirstSpan" className="viewSpanStyle">
         reactMemo İle Oluşturulan Birinci Çocuk Bileşeni Güncellendi
       </span>
     </div>
@@ -133,9 +109,9 @@ const ChildMemoSectionSecond = memo(() => {
 
   return (
     <div id={"childMemoSectionSecond"}>
-      <h3>reactMemo İle Oluşturulan İkinci Çocuk Bileşeni</h3>
+      <h3>2- reactMemo İle Oluşturulan İkinci Çocuk Bileşeni</h3>
 
-      <span id="childMemoSectionSecondSpan" style={viewSpanStyle}>
+      <span id="childMemoSectionSecondSpan" className="viewSpanStyle">
         reactMemo İle Oluşturulan İkinci Çocuk Bileşeni Güncellendi
       </span>
     </div>
@@ -145,7 +121,7 @@ const ChildMemoSectionSecond = memo(() => {
 const SubjectExpressionSection = () => {
   return (
     <>
-      <h3 style={{ marginBottom: "0" }}>useCallback Hakkında</h3>
+      <h3 style={{ marginBottom: "0" }}>3- useCallback Hakkında</h3>
 
       <p>
         Kısa bir şekilde ifade etmek gerekirse useCallback neredeyse useMemo ile

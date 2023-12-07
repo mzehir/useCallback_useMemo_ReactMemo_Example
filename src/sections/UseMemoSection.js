@@ -1,28 +1,5 @@
 import React, { useState, useMemo } from "react";
-
-const rootStyle = {
-  width: "25vw",
-  border: "1px solid black",
-  padding: "10px",
-};
-
-const operationsAndViewsWrapperStyle = {
-  display: "flex",
-  flexDirection: "column",
-  gap: "5px",
-  border: "1px dotted blue",
-  padding: "25px",
-};
-
-const viewSpanStyle = {
-  fontWeight: 400,
-  background: "white",
-  color: "black",
-  padding: "10px 15px",
-  borderRadius: "4px",
-  border: "1px solid rgb(79, 98, 148)",
-  boxShadow: "0 0 4px rgb(79, 98, 148)",
-};
+import "./section.css";
 
 let perfomanceSectionRender = 0;
 let nonPerformingSectionRender = 0;
@@ -44,11 +21,11 @@ const UseMemoSection = () => {
   };
 
   return (
-    <div style={rootStyle}>
-      <h1>useMemo Örneği</h1>
+    <div className="sectionRootStyle boxShadowSectionStyle">
+      <h1 className="titleStyle">useMemo Örneği</h1>
 
       {/* işlemler */}
-      <div style={operationsAndViewsWrapperStyle}>
+      <div className="operationsAndViewsWrapperStyle boxShadowSectionItemStyle">
         <h2
           style={{
             textDecoration: "underline",
@@ -89,7 +66,7 @@ const UseMemoSection = () => {
       <br />
 
       {/* Gösterimler */}
-      <div style={operationsAndViewsWrapperStyle}>
+      <div className="operationsAndViewsWrapperStyle boxShadowSectionItemStyle">
         <h2
           style={{
             textDecoration: "underline",
@@ -123,9 +100,9 @@ export default UseMemoSection;
 const PerformanceSection = ({ sumWithMemo, renderCount }) => {
   return (
     <>
-      <h3>Performanslı Bölüm</h3>
+      <h3>1- Performanslı Bölüm</h3>
 
-      <span style={viewSpanStyle}>
+      <span className="viewSpanStyle">
         useMemo fonksiyon render Sayısı: {renderCount}
       </span>
 
@@ -140,9 +117,9 @@ const PerformanceSection = ({ sumWithMemo, renderCount }) => {
 const NonPerformingSection = ({ sumWithoutMemo, renderCount }) => {
   return (
     <>
-      <h3>Performanssız Bölüm</h3>
+      <h3>2- Performanssız Bölüm</h3>
 
-      <span style={viewSpanStyle}>
+      <span className="viewSpanStyle">
         standart fonksiyon render Sayısı: {renderCount}
       </span>
 
@@ -157,7 +134,7 @@ const NonPerformingSection = ({ sumWithoutMemo, renderCount }) => {
 const SubjectExpressionSection = () => {
   return (
     <>
-      <h3 style={{ marginBottom: "0" }}>useMemo Hakkında</h3>
+      <h3 style={{ marginBottom: "0" }}>3- useMemo Hakkında</h3>
 
       <p>
         Bu hook, bir değeri hesaplamak ve bu değeri önbellekte (cache) tutmak
